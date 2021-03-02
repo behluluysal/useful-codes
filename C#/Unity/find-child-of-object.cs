@@ -3,6 +3,7 @@
     Animator anim;
 
     // Find works with object names, can be changed by tag
+    //tst
     void Start()
     {
         _pandora = GameObject.Find("BoxOfPandora");
