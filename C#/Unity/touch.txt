@@ -1,0 +1,45 @@
+if (Input.touchCount > 0)
+        {
+            _touch = Input.GetTouch(0);
+            if (_touch.phase == TouchPhase.Began)
+            {
+                _touchPosStart = _touch.position;
+            }
+            else if (_touch.phase == TouchPhase.Moved || _touch.phase == TouchPhase.Ended)
+            {
+                _touchPosEnd = _touch.position;
+                float x = _touchPosEnd.x - _touchPosStart.x;
+                float y = _touchPosEnd.y - _touchPosStart.y;
+
+                if (Mathf.Abs(x) == 0 && Mathf.Abs(y) == 0) //TAPPED! (select hexagons)
+                {
+
+                }
+                //TURN SELECTED OBJECTS
+                else if (Mathf.Abs(x) > Mathf.Abs(y) )
+                {
+                    //GetNeighboors and turn clockwise or counter-clockwise.
+                    if (x > 0)//right swipe
+                    {
+                        
+                    }
+                    else//left swipe
+                    {
+                        
+                    }
+                }
+
+                else if (Mathf.Abs(x) < Mathf.Abs(y) )
+                {
+                    //GetNeighboors and turn clockwise or counter-clockwise.
+                    if (y > 0)//up swipe
+                    {
+                        
+                    }
+                    else//down swipe
+                    {
+                        
+                    }
+                }
+            }
+        }
